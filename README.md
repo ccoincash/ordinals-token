@@ -57,3 +57,7 @@ The token NFT has following data:
 When a user transfers tokens, they must identify a collection of token NFTs associated with their address that contains at least the desired quantity of tokens to be transferred. This collection of token NFTs is used as the input for the transaction, and the output generates a new token NFT containing the desired quantity of tokens to be transferred. If change is required, an additional token NFT output is added.
 
 ![transfer](pics/ordinals-token-transfer.png)
+
+### Features
+
+Due to our reliance on Ordinals NFT as the credential for tokens, the token transactions has properties similar to satoshi UTXO. Without using RBF in transactions, we can further operate on the tokens while the transactions are unconfirmed after receiving new Token NFTs. The use of UTXO forms a dependency chain, which automatically sorts all token operations. With this feature, we can further develop token swap protocols.
